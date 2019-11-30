@@ -13,4 +13,8 @@ $(document).ready(function(){
         $(this).hide();
         $('#hide').show();
     })
+
+    $('#hiteItem').click(function(){
+        $('ul li:nth-child(3)').hide();
+    })
 })
