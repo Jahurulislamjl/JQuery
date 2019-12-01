@@ -2,16 +2,16 @@ $(document).ready(function(){
     $('h1').hide();
 
     $('#hide').click(function(){
-        $('p').hide();
-        $(this).hide();
+        $('p').hide('slow');
+        $(this).hide('slow');
         $('#show').show();
     })
 
 
     $('#show').click(function(){
-        $('p').show();
-        $(this).hide();
-        $('#hide').show();
+        $('p').show('slow');
+        $(this).hide('slow');
+        $('#hide').show('slow');
     })
 
     $('#hiteItem').click(function(){
@@ -22,6 +22,14 @@ $(document).ready(function(){
     $('h3').on({
         mouseenter:function(){
             $('h3').css("background", "red")
+        },
+
+        mouseleave:function(){
+            $('h3').css("background", "green")
+        },
+
+        dblclick:function(){
+            $('h3').css("background", "yellow")
         }
     });
 })
