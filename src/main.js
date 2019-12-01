@@ -17,4 +17,11 @@ $(document).ready(function(){
     $('#hiteItem').click(function(){
         $('ul li:nth-child(3)').hide();
     })
+
+
+    $('h3').on({
+        mouseenter:function(){
+            $('h3').css("background", "red")
+        }
+    });
 })
