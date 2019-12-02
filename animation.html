@@ -7,11 +7,42 @@
     <title>animation</title>
 </head>
 <body>
-    <div class="container">
-        <div class="box1"></div>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
     </div>
+    <button id="startbtn" onclick="boxMove()">Start</button>
+    <button id="startbtn" onclick="stopMove()">stop</button>
 
-    <script src="src/js/jquery-3.4.1.min.js"></script>
-    <script src="src/main.js"></script>
+    <script>
+        var id;
+        function boxMove(){
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            var pos = -50;
+             id = setInterval(frame,5);
+           
+
+            function frame(){
+                if(pos==400){
+                   pos = -50;
+                }
+                else{
+                    pos++;
+                    box1.style.top = pos+"px";
+                    box1.style.left = pos+"px";
+                    box2.style.top = pos+"px";
+                    box2.style.right = pos+"px";
+                }
+            }
+        }
+        function stopMove(){
+            clearInterval(id);
+        }
+
+    </script>
+
+    <!-- <script src="src/js/jquery-3.4.1.min.js"></script>
+    <script src="src/main.js"></script> -->
 </body>
 </html>

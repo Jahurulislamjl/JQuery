@@ -1,13 +1,30 @@
-.container{
-    height: 500px;
-    width: 500px;
+#container{
+    height: 400px;
+    width: 400px;
     background: yellow;
     margin: 20px 20px;
-    padding: 10px;
+    position: relative;
+    overflow: hidden;
+  
 }
 
-.box1{
+#box1{
     height: 50px;
     width: 50px;
     background: red;
+    position: absolute;
+}
+#box2{
+    height: 50px;
+    width: 50px;
+    background: green;
+    margin-left: 350px;
+    position: absolute;
+}
+
+#startbtn{
+    background: green;
+    margin-left: 30px;
+    padding:5px ;
+    color: white;
 }
