@@ -19,20 +19,24 @@
         function boxMove(){
             var box1 = document.getElementById("box1");
             var box2 = document.getElementById("box2");
-            var pos = -50;
+            var pos = 0;
              id = setInterval(frame,5);
            
 
             function frame(){
-                if(pos==400){
-                   pos = -50;
+                if(pos==350){
+                    box1.style.left = 0;
+                    pos++;
+                   box1.style.left = pos+"px";
+                   box1.style.top = pos;
+
                 }
                 else{
                     pos++;
                     box1.style.top = pos+"px";
-                    box1.style.left = pos+"px";
-                    box2.style.top = pos+"px";
-                    box2.style.right = pos+"px";
+                    //box1.style.left = pos+"px";
+                    //box2.style.top = pos+"px";
+                    //box2.style.right = pos+"px";
                 }
             }
         }
